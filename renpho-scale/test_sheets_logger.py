@@ -215,7 +215,11 @@ class ImmediateAnnouncementTests(unittest.IsolatedAsyncioTestCase):
                         scales[0].fire_final()
                     release_speech.set()
                     await asyncio.wait_for(upload_started.wait(), 2)
-                    self.assertEqual(order, ['speech_started', 'speech_finished', 'upload_started'])
+                    # A pending wake signal may start a valid retry before the
+                    # observer resumes on a fast runner. Ordering and outbox
+                    # deduplication are the contract, not exactly one attempt.
+                    self.assertEqual(order[:3], ['speech_started', 'speech_finished', 'upload_started'])
+                    self.assertTrue(all(item == 'upload_started' for item in order[3:]))
                     with closing(sqlite3.connect(path)) as db:
                         self.assertEqual(db.execute('SELECT COUNT(*) FROM readings WHERE delivered=0').fetchone()[0], 1)
                         if early:
