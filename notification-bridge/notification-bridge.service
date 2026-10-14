@@ -1,0 +1,31 @@
+[Unit]
+Description=iPhone notification bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=notification-bridge
+Group=notification-bridge
+SupplementaryGroups=homelab-controls
+WorkingDirectory=/opt/notification-bridge
+EnvironmentFile=/etc/notification-bridge.env
+ExecStart=/opt/notification-bridge/venv/bin/python /opt/notification-bridge/bridge.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+StateDirectory=notification-bridge
+StateDirectoryMode=0700
+ReadWritePaths=/var/lib/homelab-controls
+UMask=0077
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+
+[Install]
+WantedBy=multi-user.target

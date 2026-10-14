@@ -1,0 +1,20 @@
+[Unit]
+Description=Record private Pi power, memory, storage and network health
+After=systemd-journald.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /opt/pi-diagnostics/snapshot.py
+TimeoutStartSec=60
+Nice=10
+IOSchedulingClass=idle
+UMask=0077
+StateDirectory=pi-diagnostics
+StateDirectoryMode=0700
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_NETLINK
+ReadWritePaths=/var/lib/pi-diagnostics

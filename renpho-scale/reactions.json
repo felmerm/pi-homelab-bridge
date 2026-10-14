@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "audio_enabled": true,
+  "roast_threshold_lb": 100,
+  "special": {
+    "enabled": false,
+    "sound": "damn_son",
+    "lights_target": "all lights"
+  },
+  "sounds": {
+    "bruh": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "fah": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "oof": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "bell": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "boom": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "laugh": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "wow": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "rizz": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3",
+    "damn_son": "https://raw.githubusercontent.com/felmerm/pi-homelab-bridge/main/examples/tone.mp3"
+  },
+  "good": [
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. Main character weigh-in.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. The scale approves.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. A clean performance.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. The training montage continues.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. Achievement unlocked.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. The scale gives you a gold star.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. A respectable entrance.",
+      "after": ""
+    },
+    {
+      "sound": "wow",
+      "before": "{weight} pounds. That deserves a victory sound.",
+      "after": ""
+    }
+  ],
+  "bad": [
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. Please take a number. This scale has a queue.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The scale has requested a lunch break.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The bathroom floor would like a word.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The scale is updating its resume.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. Your scale has opened a support ticket.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The loading screen has entered overtime.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The scale would like hazard pay.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. That landing needs an instant replay.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The scale has asked for a second opinion.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The scale is considering early retirement.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. The bathroom just became a boss arena.",
+      "after": ""
+    },
+    {
+      "sound": "bruh",
+      "before": "{weight} pounds. Your scale is looking for the skip button.",
+      "after": ""
+    }
+  ]
+}

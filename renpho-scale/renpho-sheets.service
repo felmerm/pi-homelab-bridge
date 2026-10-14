@@ -1,0 +1,30 @@
+[Unit]
+Description=Felm's Renpho scale to Google Sheets
+After=bluetooth.service network-online.target
+Wants=bluetooth.service network-online.target
+ConditionPathExists=/etc/renpho-scale/google-service-account.json
+
+[Service]
+Type=simple
+User=renpho-scale
+Group=renpho-scale
+SupplementaryGroups=bluetooth homelab-controls
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/renpho-scale/venv/bin/python -I /opt/renpho-scale/sheets_logger.py
+Restart=on-failure
+RestartSec=15
+TimeoutStopSec=120
+UMask=0077
+StateDirectory=renpho-scale
+StateDirectoryMode=0700
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_BLUETOOTH
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+{
+  "address": "AA:BB:CC:DD:EE:FF",
+  "spreadsheet_id": "YOUR_SPREADSHEET_ID",
+  "sheet_name": "Weigh-ins",
+  "timezone": "UTC",
+  "credentials": "/etc/renpho-scale/google-service-account.json",
+  "outbox": "/var/lib/renpho-scale/readings.sqlite3",
+  "announce_on_reading": true,
+  "announcement_token": "/etc/renpho-scale/announcement.token",
+  "announcement_certificate": "/etc/notification-bridge-iphone.crt"
+}

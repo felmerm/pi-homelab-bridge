@@ -1,0 +1,23 @@
+[
+  {"name":"audio first, weight last","text":"{audio} Weight is {weight}","before":"","after":"Weight is {weight}","valid":true},
+  {"name":"weight first, audio last","text":"{weight} pounds. {audio}","before":"{weight} pounds.","after":"","valid":true},
+  {"name":"audio middle, repeated weight","text":"{weight} first. {audio} Last is {weight}","before":"{weight} first.","after":"Last is {weight}","valid":true},
+  {"name":"audio only","text":"{audio}","before":"","after":"","valid":true},
+  {"name":"implicit audio end","text":"Weight is {weight}","before":"Weight is {weight}","after":"","valid":true},
+  {"name":"speech only weight first","text":"{weight} pounds. No sound.","before":"{weight} pounds. No sound.","after":"","audio":false,"valid":true},
+  {"name":"speech only weight last","text":"No sound. Weight is {weight}","before":"No sound. Weight is {weight}","after":"","audio":false,"valid":true},
+  {"name":"disabled audio marker joins speech","text":"First {audio} Last {weight}","before":"First","after":"Last {weight}","audio":false,"valid":true},
+  {"name":"whitespace and line breaks","text":" \n {weight}\t {audio}\n End. \n","before":"{weight}","after":"End.","valid":true},
+  {"name":"XML is literal, emoji safe","text":"<break time=\"9s\"/> A & B 😭 {weight} {audio} <audio src=\"evil\"/>","before":"<break time=\"9s\"/> A & B 😭 {weight}","after":"<audio src=\"evil\"/>","valid":true},
+  {"name":"blank with audio is clip only","text":" \n ","before":"","after":"","valid":true},
+  {"name":"empty speech only","text":"","audio":false,"valid":false},
+  {"name":"disabled clip only","text":"{audio}","audio":false,"valid":false},
+  {"name":"duplicate audio","text":"Start {audio} Middle {audio} End","valid":false},
+  {"name":"unknown placeholder","text":"Weight {weigth}","valid":false},
+  {"name":"unclosed placeholder","text":"Weight {weight","valid":false},
+  {"name":"double braces","text":"{{weight}}","valid":false},
+  {"name":"format expression","text":"{weight:.2f}","valid":false},
+  {"name":"attribute expression","text":"{weight.__class__}","valid":false},
+  {"name":"null character","text":"bad\u0000text","valid":false},
+  {"name":"unpaired surrogate","text":"bad\ud800text","valid":false}
+]

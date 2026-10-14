@@ -1,0 +1,5 @@
+__pycache__/
+local-logs/
+audio-cache/
+preview*.jpg
+preview*.png

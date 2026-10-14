@@ -1,0 +1,12 @@
+[Unit]
+Description=Record Pi health every two minutes
+
+[Timer]
+OnBootSec=30s
+OnCalendar=*-*-* *:0/2:00
+AccuracySec=5s
+Persistent=true
+Unit=pi-diagnostics.service
+
+[Install]
+WantedBy=timers.target

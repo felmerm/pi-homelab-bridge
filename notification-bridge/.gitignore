@@ -1,0 +1,19 @@
+# Never commit private runtime material.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.env
+amazon.json
+browser-pending.json
+*.key
+*.pem
+*.token
+*.p12
+*.pfx
+id_ed25519
+id_rsa
+
+# Local upstream audit evidence remains on disk, excluded from publication by default.
+audit/

@@ -1,0 +1,13 @@
+audit/
+__pycache__/
+venv/
+*.pyc
+config.json
+*.db
+*.csv
+*.sqlite3*
+google-service-account*.json
+sheets.json
+*.jsonl
+
+media/originals/
